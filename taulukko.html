@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 3%;
+            }
+            table {
+                border-collapse: collapse;
+                font-weight: bold;
+                table-layout: fixed;
+                width: 100%;
+                margin: 0%;
+                padding: 0%;
+            }
+            .sarake1 {
+                width: 20%;
+            }
+            td {
+                border: 3px solid black;
+                min-width: 2em;
+                height: 2ex;
+            }
+            #taulukko1 {
+                margin-bottom: 10ex;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <table id="taulukko1">
+            <col class="sarake1"/>
+        </table>
+
+        <table id="taulukko2">
+            <col class="sarake1"/>
+        </table>
+
+    </body>
+    <script>
+        let taul1 = document.getElementById("taulukko1");
+        let taul2 = document.getElementById("taulukko2");
+
+        // Silmukka joka luo ja lisaa taulukon solut paikalleen
+        // Kirjoittaa numerot ensimmaisen rivin soluihin jattaen 
+        // ensimmaisen solun tyhjaksi.
+        function luuppi (rmaara, smaara, elementti) {
+
+            for (i = 0; i < rmaara; i++) {
+                let uusirivi = document.createElement("tr");
+                elementti.appendChild(uusirivi);
+                for (j = 0; j < smaara; j++) {
+                    let uusisolu = document.createElement("td");
+                    if (i === 0 && j > 0) {
+                        uusisolu.innerText = j;
+                    }
+                    uusirivi.appendChild(uusisolu);
+                }
+            };
+        }
+
+        luuppi(14, 32, taul1);
+        luuppi(5, 32, taul2);
+
+        </script>
+</html>
