@@ -45,7 +45,7 @@
         // Silmukka joka luo ja lisaa taulukon solut paikalleen
         // Kirjoittaa numerot ensimmaisen rivin soluihin jattaen 
         // ensimmaisen solun tyhjaksi.
-        function luuppi (rmaara, smaara, elementti) {
+        function luoTaulukko (rmaara, smaara, elementti) {
 
             for (i = 0; i < rmaara; i++) {
                 let uusirivi = document.createElement("tr");
@@ -60,8 +60,8 @@
             };
         }
 
-        luuppi(14, 32, taul1);
-        luuppi(5, 32, taul2);
+        luoTaulukko(14, 32, taul1);
+        luoTaulukko(5, 32, taul2);
 
         </script>
 </html>
